@@ -41,9 +41,9 @@ public class EchoClient {
 				System.out.println("<<"+echoMessage);
 			}
 		} catch (IOException e) {
-			
 			e.printStackTrace();
 		}finally{
+			scanner.close();
 			try {
 				if(socket != null && socket.isClosed()==true)
 				socket.close();
